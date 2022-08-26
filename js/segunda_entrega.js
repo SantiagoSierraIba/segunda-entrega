@@ -89,7 +89,6 @@ function renderizarCarrito() {
                     <p class="card-text">Precio: $${prod.precio * prod.cantidad}</p>
                     <button id="btn-borrar${prod.id}" class="btn btn-light">Quitar del Carrito</button>
                     <br></br>
-                    <button id="btn-restar${prod.id}" class="btn btn-light">Disminuir Cantidad</button>
                 </div>
             </div>
         </div>`

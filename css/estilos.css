@@ -1,3 +1,17 @@
 .logo{
     width: 160px;
 }
+
+footer{
+    background-color: #F4F4ED;
+    height: 200px;
+    display: flex;
+}
+
+footer p{
+    margin: auto;
+}
+
+.container{
+    margin-bottom: 50px;
+}
