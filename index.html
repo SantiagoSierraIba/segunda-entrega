@@ -131,24 +131,20 @@
         <section class="sectionFooter">
             <div class="row g-3">
                 <div class="col">
-                    <p>Ingresa tu Nombre:</p>
-                    <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
-                </div>
-                <div class="col">
-                    <p>Ingresa tu Apellido:</p>
-                    <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+                    <p>Ingresa tu Nombre Completo:</p>
+                    <input id="nombreCliente" type="text" class="form-control" placeholder="Nombre" aria-label="First name">
                 </div>
             </div>
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="form-label">Ingresa tu edad:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="...">
+                <input id="edadCliente" type="text" class="form-control" id="formGroupExampleInput" placeholder="...">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Ingresa tus comentarios</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="..."></textarea>
+                <textarea id="comentariosCliente" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="..."></textarea>
             </div>
             <div class="col-12">
-                <button type="submit" class="btn btn-dark">Enviar</button>
+                <button id="btnEnviar" type="submit" class="btn btn-dark">Enviar</button>
             </div>
         </section>
     </footer>

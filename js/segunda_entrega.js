@@ -4,6 +4,10 @@ const campos = document.querySelectorAll("input")
 // const btnBuscar = document.querySelector(".btn .btn-dark")
 const cuerpo = document.getElementById("cuerpo")
 const carritoSection = document.getElementById("carrito")
+const btnEnviar = document.getElementById("btnEnviar")
+const nombreCliente = document.getElementById("nombreCliente")
+const edadCliente = document.getElementById("edadCliente")
+const comentariosCliente = document.getElementById("comentariosCliente")
 
 
 class Producto {
@@ -111,15 +115,12 @@ renderizarCarrito()
 
 
 // Formulario de Datos personales
-const datosCompletos = () => { 
-    if (propiedad.value !== "..." && ubicacion.value !== "..." && parseInt(metros2.value) && metros2.value >= 20) {
-        return true
-    } else {
-        return false
-    }
-}
+const datosCompletos = () => (nombreCliente.value !== "" && edadCliente.value !== "" && comentariosCliente.value !== "" && parseInt(edadCliente.value) && edadCliente.value >= 18) ? true : false
+
+const mostrarMensaje = ()=> (datosCompletos()) ? alert("Gracias por ingresar tus comentarios") : alert("⛔️ Completa todos los valores solicitados.")
 
 
+btnEnviar.addEventListener("click", mostrarMensaje)
 
 
 
