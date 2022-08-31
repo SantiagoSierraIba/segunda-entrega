@@ -69,9 +69,9 @@ function agregarAlCarrito(prod) {
 function restarCantidad(prod) {
 
     let prodFind = carrito.find(productoFinal => productoFinal.id === prod.id)
-    if (prodFind.cantidad==1){
+    if (prodFind.cantidad == 1) {
         borrarProducto()
-    } else if (prodFind>1){
+    } else if (prodFind > 1) {
         prodFind.cantidad--;
     }
     renderizarCarrito()
@@ -110,6 +110,14 @@ crearCards()
 renderizarCarrito()
 
 
+// Formulario de Datos personales
+const datosCompletos = () => { 
+    if (propiedad.value !== "..." && ubicacion.value !== "..." && parseInt(metros2.value) && metros2.value >= 20) {
+        return true
+    } else {
+        return false
+    }
+}
 
 
 

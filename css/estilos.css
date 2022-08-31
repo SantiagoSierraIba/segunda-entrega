@@ -4,11 +4,22 @@
 
 footer{
     background-color: #F4F4ED;
-    height: 200px;
-    display: flex;
+    height: 400px;
+    text-align: center;
+    padding-top: 20px;
 }
 
 footer p{
+    margin: auto;
+}
+
+.copyright{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.sectionFooter{
+    width: 400px;
     margin: auto;
 }
 
