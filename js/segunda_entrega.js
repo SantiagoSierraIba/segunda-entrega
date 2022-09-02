@@ -115,13 +115,24 @@ renderizarCarrito()
 
 
 // Formulario de Datos personales
-const datosCompletos = () => (nombreCliente.value !== "" && edadCliente.value !== "" && comentariosCliente.value !== "" && parseInt(edadCliente.value) && edadCliente.value >= 18) ? true : false
-
-const mostrarMensaje = ()=> (datosCompletos()) ? alert("Gracias por ingresar tus comentarios") : alert("⛔️ Completa todos los valores solicitados.")
+const datosCompletos = () => (nombreCliente.value !== "" && edadCliente.value !== "" && comentariosCliente.value !== "" && parseInt(edadCliente.value)) ? true : false
+const mostrarMensaje = ()=> (datosCompletos()) ? sweetAlert("Gracias por ingresar tus comentarios", 'success', 'green') : sweetAlert("Completa todos los valores solicitados.",'error','red')
 
 
 btnEnviar.addEventListener("click", mostrarMensaje)
 
+const sweetAlert = (mensaje, icono, bgcolor)=> {
+    Swal.fire({
+        toast: true,
+        position: 'top-end',
+        text: mensaje,
+        icon: icono,
+        showConfirmButton: false,
+        timer: 5000,
+        background: bgcolor,
+        color: 'white'
+    })
+}
 
 
 
