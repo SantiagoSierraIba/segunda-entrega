@@ -14,14 +14,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-    <script defer src="js/segunda_entrega.js"></script>
+    <script defer src="./js/segunda_entrega.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html">
+                <a class="navbar-brand logo_centrado" href="./index.html">
                     <img class="logo" src="./images/logo.png" alt="Logo de Wuacamoli">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -34,10 +34,16 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./views/coleccion.html">Collections</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./views/coleccion.html">About Us</a>
+                        </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
-                        <button class="btn btn-dark" type="submit">Buscar</button>
+                        <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+                        <button class="btn btn-dark" type="submit">Search</button>
                     </form>
                 </div>
             </div>
@@ -45,7 +51,7 @@
     </header>
     <main class="container justify-content-center">
         <div class="busqueda">
-            <h1>Bienvenidos a Wuacamoli</h1>
+            <!-- <h1>Bienvenidos a Wuacamoli</h1> -->
         </div>
         <section>
             <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -109,6 +115,7 @@
         </section>
         <hr>
         <section>
+            <div id="loader"></div>
             <h2>Escoge tu color:</h2>
             <div id="cuerpo" class="row row-cols-1 row-cols-md-5 g-4">
                 <!-- Generado por JavaScript -->
@@ -124,16 +131,13 @@
         </section>
     </main>
     <footer>
-        <section class="copyright">
-            <p>Wuacamoli</p>
-            <p>Copy right Santiago Sierra</p>
-        </section>
-
         <section class="sectionFooter">
             <div class="row g-3">
+                <h2>¡Déjanos tus comentarios!</h2>
                 <div class="col">
                     <p>Ingresa tu Nombre Completo:</p>
-                    <input id="nombreCliente" type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+                    <input id="nombreCliente" type="text" class="form-control" placeholder="Nombre"
+                        aria-label="First name">
                 </div>
             </div>
             <div class="mb-3">
@@ -142,11 +146,16 @@
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Ingresa tus comentarios</label>
-                <textarea id="comentariosCliente" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="..."></textarea>
+                <textarea id="comentariosCliente" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                    placeholder="..."></textarea>
             </div>
             <div class="col-12">
                 <button id="btnEnviar" type="submit" class="btn btn-dark">Enviar</button>
             </div>
+        </section>
+        <section class="copyright">
+            <p>Wuacamoli</p>
+            <p>Copy right Santiago Sierra</p>
         </section>
     </footer>
 </body>
